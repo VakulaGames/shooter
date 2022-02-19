@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraHandler : MonoBehaviour //Change for Test Git
+public class CameraHandler : MonoBehaviour
 {
     public bool leftPivot;
 
