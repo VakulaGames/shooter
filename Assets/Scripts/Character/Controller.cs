@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    [SerializeField] private CharacterMovement _characterMovement;
-    [SerializeField] private CharacterAnimation _characterAnimation;
-    [SerializeField] private CharacterInput _characterInput;
+    private InputHandler _inputHandler;
+    private CharacterMovement _characterMovement;
+    private CharacterAnimation _characterAnimation;
 
-    public void Update()
+    private bool _isHandsEmpty = true;
+    
+    private void Start()
     {
-        _characterMovement.MoveUpdate();
-        _characterAnimation.AnimationUpdate();
-        _characterInput.InputUpdate();
+        _inputHandler = GetComponent<InputHandler>();
+        _characterMovement = GetComponent<CharacterMovement>();
+        _characterAnimation = GetComponent<CharacterAnimation>();
+    }
+
+    private void Update()
+    {
+        _characterMovement.Move(_inputHandler.VerticalAxis(), _inputHandler.HorizontalAxis(), _isHandsEmpty);
+        //_characterAnimation.AnimationUpdate(_inputHandler.VerticalAxis(), _inputHandler.HorizontalAxis());
     }
 }

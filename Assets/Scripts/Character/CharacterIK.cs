@@ -8,7 +8,7 @@ public class CharacterIK : MonoBehaviour
     [SerializeField] private CharacterMovement _characterMovement;
     [SerializeField] private CharacterInventory _characterInventory;
     [SerializeField] private CharacterStatus _characterStatus;
-    [SerializeField] private Transform _targetLook;
+    //[SerializeField] private Transform _targetLook;
     [SerializeField] private Transform _lHandTarget;
     [SerializeField] private float _handSpeed;
 
@@ -65,10 +65,10 @@ public class CharacterIK : MonoBehaviour
 
         if(_characterStatus.isAiming == true)
         {
-            _aimPivot.LookAt(_targetLook);
+            //_aimPivot.LookAt(_targetLook);
 
             _animator.SetLookAtWeight(.3f, .5f, .8f);
-            _animator.SetLookAtPosition(_targetLook.position);
+            //_animator.SetLookAtPosition(_targetLook.position);
 
             _animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
             _animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
@@ -83,7 +83,7 @@ public class CharacterIK : MonoBehaviour
         else
         {
             _animator.SetLookAtWeight(.3f, .3f, .8f);
-            _animator.SetLookAtPosition(_targetLook.position);
+            //_animator.SetLookAtPosition(_targetLook.position);
 
             _animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
             _animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
