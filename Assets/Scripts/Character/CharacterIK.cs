@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterIK : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    [SerializeField] private CharacterMovement _characterMovement;
+    //[SerializeField] private CharacterMovement _characterMovement;
     [SerializeField] private CharacterInventory _characterInventory;
     [SerializeField] private CharacterStatus _characterStatus;
     //[SerializeField] private Transform _targetLook;
