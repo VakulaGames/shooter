@@ -6,7 +6,7 @@ public class RunState : MoveState
 {
     private Animator _animator;
 
-    public RunState(CharacterController characterController, Animator animator) : base(characterController, animator)
+    public RunState(MoveController characterController, Animator animator, CharacterStatus characterStatus) : base(characterController, animator, characterStatus)
     {
         _animator = animator;
     }

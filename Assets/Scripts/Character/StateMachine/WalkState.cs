@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WalkState : MoveState
 {
-    public WalkState(CharacterController characterController, Animator animator) : base(characterController, animator)
+    public WalkState(MoveController characterController, Animator animator, CharacterStatus characterStatus) : base(characterController, animator, characterStatus)
     {
 
     }

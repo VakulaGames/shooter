@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77bc7d3baea72974ebf184589b4e160d, type: 3}
   m_Name: Character Status
   m_EditorClassIdentifier: 
-  isAiming: 1
-  isSprint: 0
+  isArmedGunshot: 0
+  isAiming: 0
   isGround: 0

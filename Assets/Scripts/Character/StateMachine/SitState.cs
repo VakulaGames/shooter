@@ -6,7 +6,7 @@ public class SitState : MoveState
 {
     private Animator _animator;
 
-    public SitState(CharacterController characterController, Animator animator) : base(characterController, animator)
+    public SitState(MoveController characterController, Animator animator, CharacterStatus characterStatus) : base(characterController, animator, characterStatus)
     {
         _animator = animator;
     }

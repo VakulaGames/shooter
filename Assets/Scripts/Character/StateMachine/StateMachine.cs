@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class StateMachine
 {
-    public State currentState;
+    public State CurrentState { get; private set;}
 
     public void Initialize (State startState)
     {
-        currentState = startState;
-        currentState.Enter();
+        CurrentState = startState;
+        CurrentState.Enter();
     }
 
     public void ChangeState(State newState)
     {
-        currentState.Exit();
-        currentState = newState;
-        currentState.Enter();
+        CurrentState.Exit();
+        CurrentState = newState;
+        CurrentState.Enter();
     }
 }
