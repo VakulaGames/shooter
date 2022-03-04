@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AnimationEvents))]
+[RequireComponent(typeof(CharacterIK))]
 public class WeaponChange : MonoBehaviour
 {
     [SerializeField] private CharacterStatus _characterStatus;
@@ -16,13 +18,16 @@ public class WeaponChange : MonoBehaviour
     private Weapon _lastWeapon;
     private Animator _animator;
     private AnimationEvents _animationEvent;
+    private CharacterIK _charakterIK;
     
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _animationEvent = GetComponent<AnimationEvents>();
+        _charakterIK = GetComponent<CharacterIK>();
         _animationEvent.OnTakeWeaponEvent += TakeWeapon;
         _animationEvent.OnAwayWeaponEvent += AwayWeapon;
+        _animationEvent.OnWeaponTakenEvent += WeaponTaken;
         CurrentWeapon = _fists;
     }
 
@@ -57,6 +62,7 @@ public class WeaponChange : MonoBehaviour
         {
             _lastWeapon = CurrentWeapon;
             CurrentWeapon.Away(_animator);
+            _charakterIK.DisabledIK();
             CurrentWeapon = newWeapon;
             CurrentWeapon.Take(_animator, _characterStatus);
         }
@@ -70,5 +76,10 @@ public class WeaponChange : MonoBehaviour
     private void AwayWeapon()
     {
         _lastWeapon.transform.SetParent(_lastWeapon.place, false);
+    }
+
+    private void WeaponTaken()
+    {
+        _animationEvent.RightHandPosition(CurrentWeapon.RightHandPosition, CurrentWeapon.RightHandRotation, CurrentWeapon.LeftHandTarget);
     }
 }

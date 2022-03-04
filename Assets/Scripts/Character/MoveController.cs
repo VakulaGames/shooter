@@ -33,9 +33,8 @@ public class MoveController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(1)) _characterStatus.isAiming = true;
-        else _characterStatus.isAiming = false;
-        _animator.SetBool("aiming", _characterStatus.isAiming);
+        _characterStatus.isAiming = Input.GetMouseButton(1);
+        _animator.SetBool("aiming", Input.GetMouseButton(1));
 
         if (Input.GetKey(KeyCode.LeftControl)) _stateMachine.ChangeState(_sitState);
 

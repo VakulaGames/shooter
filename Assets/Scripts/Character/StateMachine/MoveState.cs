@@ -31,8 +31,8 @@ public class MoveState : State
         
         if (_characterStatus.isArmedGunshot || _characterStatus.isAiming)
         {
-            _animator.SetFloat("vertical", vertical);
-            _animator.SetFloat("horizontal", horizontal);
+            _animator.SetFloat("vertical", vertical, 0.15f, Time.deltaTime);
+            _animator.SetFloat("horizontal", horizontal, 0.15f, Time.deltaTime);
             RotationNormal(_cameraTransform.forward);
         }
         else

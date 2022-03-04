@@ -5,6 +5,14 @@ using UnityEngine;
 public abstract class Weapon:MonoBehaviour
 {
     public Transform place;
+
+    [SerializeField] private Vector3 _righHandPosition;
+    [SerializeField] private Vector3 _rightHandRotation;
+    [SerializeField] private Transform _leftHandTarget;
+    public Vector3 RightHandPosition { get { return _righHandPosition; } }
+    public Vector3 RightHandRotation { get { return _rightHandRotation; } }
+    public Transform LeftHandTarget { get { return _leftHandTarget; } }
+
     [SerializeField] private int _damage;
     [SerializeField] private float _timeBetweenShoot;
 

@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Character\StateMachine\WalkState.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\RunState.cs" />
     <Compile Include="Assets\Scripts\Properties\CharacterStatus.cs" />
+    <Compile Include="Assets\Scripts\Character\AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Character\MoveController.cs" />
     <Compile Include="Assets\Scripts\Character\Weapon\Katana.cs" />
     <Compile Include="Assets\Scripts\Character\Weapon\AK74.cs" />
@@ -72,7 +73,7 @@
     <Compile Include="Assets\Scripts\Character\CharacterIK.cs" />
     <Compile Include="Assets\Scripts\Character\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scripts\Character\Weapon\Fists.cs" />
-    <Compile Include="Assets\Scripts\Character\AnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
