@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5C70AC58-817B-5A50-572D-B8C7154B0982}</ProjectGuid>
+    <ProjectGuid>{A7FEC6DC-F79B-B98E-4C85-31DA3C9D3FFE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,26 +54,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\StateMachine\SitState.cs" />
-    <Compile Include="Assets\Scripts\Character\WeaponChange.cs" />
+    <Compile Include="Assets\Scripts\Character\AnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Bullet.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\RollState.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\MoveState.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\WalkState.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\RunState.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterIK.cs" />
     <Compile Include="Assets\Scripts\Properties\CharacterStatus.cs" />
-    <Compile Include="Assets\Scripts\Character\AnimationEvents.cs" />
-    <Compile Include="Assets\Scripts\Character\MoveController.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\Katana.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\AK74.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Katana.cs" />
+    <Compile Include="Assets\Scripts\Weapon\AK74.cs" />
+    <Compile Include="Assets\Scripts\Character\WeaponChange.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\JumpState.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\Gunshot.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\Gun.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\SteelArms.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Gunshot.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Shooter.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Gun.cs" />
+    <Compile Include="Assets\Scripts\Weapon\SteelArms.cs" />
     <Compile Include="Assets\Scripts\Character\StateMachine\State.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterIK.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Character\Weapon\Fists.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Fists.cs" />
+    <Compile Include="Assets\Scripts\Character\MoveController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

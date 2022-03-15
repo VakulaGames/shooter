@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class MoveController : MonoBehaviour
 {
+    public bool debugAiming;
     [SerializeField] private CharacterStatus _characterStatus;
     private Animator _animator;
     private StateMachine _stateMachine;
@@ -33,9 +34,17 @@ public class MoveController : MonoBehaviour
 
     private void Update()
     {
-        _characterStatus.isAiming = Input.GetMouseButton(1);
-        _animator.SetBool("aiming", Input.GetMouseButton(1));
-
+        if (debugAiming == true)
+        {
+            _characterStatus.isAiming = true;
+            _animator.SetBool("aiming", true);
+        }
+        else
+        {
+            _characterStatus.isAiming = Input.GetMouseButton(1);
+            _animator.SetBool("aiming", Input.GetMouseButton(1));
+        }
+        
         if (Input.GetKey(KeyCode.LeftControl)) _stateMachine.ChangeState(_sitState);
 
         else

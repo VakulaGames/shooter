@@ -49,11 +49,6 @@ public class WeaponChange : MonoBehaviour
         {
             ChangeWeapon(_aK74);
         }
-
-        if (Input.GetMouseButton(0))
-        {
-            CurrentWeapon.Shoot(_animator);
-        }
     }
 
     private void ChangeWeapon(Weapon newWeapon)
